@@ -19,9 +19,14 @@ setup(name='youtube_to_mpd',
       long_description=LONG_DESCRIPTION,
       author='Jeroen Doggen',
       author_email='jeroendoggen@gmail.com',
-      url='https://github.com/jeroendoggen/youtube_to_mpd',
+      url='https://github.com/ngarnsworthy/youtube-to-mpd',
       packages=['youtube_to_mpd'],
       package_data={'youtube_to_mpd': ['*.py', '*.conf']},
       license='GPLv3',
       platforms=['Linux'],
+      entry_points={
+        'console_scripts': [
+            'youtube_to_mpd = youtube_to_mpd.main:run',
+        ],
+      }
       )
